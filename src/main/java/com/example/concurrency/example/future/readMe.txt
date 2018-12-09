@@ -1,0 +1,1 @@
+客户端不用主动去询问future是否完成，而是future完成时自动回调operationcompleted方法，客户端只需在回调里实现逻辑即可
