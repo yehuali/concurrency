@@ -140,7 +140,7 @@ public class AbstractFuture<V> implements IFuture<V> {
         if (!isDone()) { // 若已完成就直接返回了
             // 若允许终端且被中断了则抛出中断异常
             if (interruptable && Thread.interrupted()) {
-                throw new InterruptedException("thread " + Thread.currentThread().getName() + " has been interrupted.");
+                throw new InterruptedException("interView " + Thread.currentThread().getName() + " has been interrupted.");
             }
 
             boolean interrupted = false;
