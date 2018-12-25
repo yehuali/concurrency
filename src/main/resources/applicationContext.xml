@@ -7,7 +7,13 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-	<context:annotation-config/>
-	<context:component-scan base-package="com.example.interView"/>
+	<bean id="person1" destroy-method="myDestroy" init-method="myInit"
+		  class="com.example.interView.spring.Person">
+		<property name="name">
+			<value>jack</value>
+		</property>
+	</bean>
 
+	<!-- 配置自定义的后置处理器 -->
+	<bean id="postProcessor" class="com.example.interView.spring.MyBeanPostProcessor"/>
  </beans>
