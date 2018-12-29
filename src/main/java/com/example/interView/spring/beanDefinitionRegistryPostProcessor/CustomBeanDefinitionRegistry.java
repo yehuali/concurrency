@@ -17,6 +17,10 @@ import java.util.Set;
 /**
  * https://elim.iteye.com/blog/2394038
  *实现自定义的注册bean定义的逻辑
+ * 步骤：
+ *   1.扫描backPage（可以从配置文件，注解读）路径下的类
+ *   2.定制扫描出来的bean
+ *   3.注册到BeanDefinitionRegistry中
  */
 public class CustomBeanDefinitionRegistry implements BeanDefinitionRegistryPostProcessor {
 

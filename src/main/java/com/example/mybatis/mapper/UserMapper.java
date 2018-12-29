@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 /**
+ * Spring在BeanFactoryPostProcessor时，将BeanClass替换为MapperFactoryBean.class
  * https://blog.csdn.net/gebitan505/article/details/54929287
  * user_sex、nick_name两个属性在数据库加了下划线和实体类属性名不一致，另外user_sex使用了枚举
  * @Result 修饰返回的结果集 如果实体类属性和数据库属性名保持一致，就不需要这个属性来修饰
