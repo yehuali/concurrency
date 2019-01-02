@@ -1,6 +1,6 @@
 package com.example.interView.spring.autoconfig;
 
-import org.joda.time.DateTime;
+import com.example.zhangjiespringbootstarter.service.ExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TimeUtilsStarterController {
 
     @Autowired
-    private TimeUtils timeUtils;
+    private ExampleService exampleService;
 
-    @RequestMapping("/time/utils/gain-now-time.htm")
+    @RequestMapping("/time/greet")
     public String gainNowTime() {
-        return timeUtils.generateCreateTimeText(new DateTime("2017-02-22T15:30:30").toDate());
+       return exampleService.wrap("zhangjie");
     }
 }
