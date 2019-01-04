@@ -10,6 +10,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * 部署时两种选择：1.打成 jar 包，使用 java -jar 的方式运行(--->会导致容器搜索算法出现问题)
  *                  --->替代选项：ServletContextInitializer
  *                2.打成 war 包，交给外置容器去运行
+ * ServletContextInitializer：spring 中 ServletContainerInitializer 的代理
  */
 @SpringBootApplication
 @ServletComponentScan
