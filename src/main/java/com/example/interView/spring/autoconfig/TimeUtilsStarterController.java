@@ -13,7 +13,7 @@ public class TimeUtilsStarterController {
     private ExampleService exampleService;
 
     @RequestMapping("/time/greet")
-    public String gainNowTime() {
-       return exampleService.wrap("zhangjie");
+    public String gainNowTime(String name) {
+       return exampleService.wrap(name);
     }
 }
